@@ -9,9 +9,7 @@ class MyApp extends StatelessWidget {
       title: 'Use Theme',
       home: MyHome(),
       theme: ThemeData( 
-        primaryColor: Colors.red,
         accentColor: Colors.teal,
-        // backgroundColor: Colors.black12
       ),
     );
   }
@@ -23,11 +21,10 @@ class MyHome extends StatelessWidget{
     return Scaffold(
       appBar: AppBar(
         title: Text('Use Theme'),
-        backgroundColor: Colors.teal,), // màu appbar 
+        backgroundColor: Theme.of(context).accentColor,), // màu appbar 
       body: Container( 
         // một cách khác để đặt background (không sử dụng đồng thời với color)
         decoration: BoxDecoration(
-          color: Colors.black87,
           // background image from url
           image: DecorationImage(
             image: NetworkImage('https://img.thuthuatphanmem.vn/uploads/2018/09/28/hinh-nen-iphone-dep-nhat_030009517.jpg',),
@@ -52,7 +49,7 @@ class MyHome extends StatelessWidget{
       ),
       floatingActionButton: Theme( 
         data: Theme.of(context).copyWith(
-          colorScheme: Theme.of(context).colorScheme.copyWith(secondary: Colors.teal),
+          colorScheme: Theme.of(context).colorScheme.copyWith(secondary: Theme.of(context).accentColor),
         ),
         child: FloatingActionButton(
           child: Icon(Icons.add_to_queue, color: Colors.white,),
