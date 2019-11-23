@@ -35,7 +35,7 @@ Hãy  tính tiền hộ team để các bạn ấy không phải đau đầu tí
   <img src = "../img/my_card.png" width="300">
 </td>
 <td>
-  <img src = "../img/weather.png" width="300">
+  <img src = "../img/weather.jpg" width="300">
 </td>
 </tr>
 </table>
